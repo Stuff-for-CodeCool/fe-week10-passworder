@@ -35,6 +35,9 @@ const App = () => {
             let success = await login({ username, password });
             setIsLogged(success);
             setShowForm(0);
+            setError("");
+            setPassword("");
+            setPasswordVerif("");
         } catch (error) {
             setError("Invalid username or password");
             setUsername("");
